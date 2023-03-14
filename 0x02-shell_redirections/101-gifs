@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -iname "*.gif" -printf "%f\n" | rev | cut -f 2- -d '.' | rev | sort -fi | tr '\n' '\0' | xargs -0 -I{} basename {} .gif
